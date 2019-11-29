@@ -1,0 +1,19 @@
+{
+    "name": "danieldauber/facebook-bot-sdk",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Dauber",
+            "email": "web@dauber.com.br"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "CodeBot\\": "src"
+        }
+    }
+}
