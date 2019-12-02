@@ -4,9 +4,9 @@ namespace CodeBot\TemplatesMessage;
 
 use CodeBot\Element\ElementInterface;
 
-class ButtonsTemplate implements TemplateInterface
+class ListTemplate implements TemplateInterface
 {
-    protected $buttons = [];
+    protected $products = [];
     protected $recipientId;
 
 
@@ -17,7 +17,7 @@ class ButtonsTemplate implements TemplateInterface
 
     public function add(ElementInterface $element)
     {
-        $this->buttons[] = $element->get();
+        $this->products[] = $element->get();
     }
 
     public function message(string $message): array
@@ -31,9 +31,9 @@ class ButtonsTemplate implements TemplateInterface
                 'attachment' => [
                     'type' => 'template',
                     'payload' => [
-                        'template_type' => 'button',
+                        'template_type' => 'list',
                         'text' => $message,
-                        'buttons' => $this->buttons
+                        'buttons' => $this->products
                     ]
                 ]
             ],
