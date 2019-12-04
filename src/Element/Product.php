@@ -46,6 +46,6 @@ class Product implements ElementInterface
         if ($this->buttons !== null) {
             $result['buttons'] = $this->buttons;
         }
-        return [];
+        return $result;
     }
 }

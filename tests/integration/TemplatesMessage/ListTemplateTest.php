@@ -6,7 +6,7 @@ use CodeBot\Element\Button;
 use CodeBot\Element\Product;
 use PHPUnit\Framework\TestCase;
 
-class GenericTemplateTest extends TestCase
+class listTemplateTest extends TestCase
 {
     public function testListProduct()
     {
@@ -18,7 +18,7 @@ class GenericTemplateTest extends TestCase
             new Button('web_url', null, 'http://www.google.com')
         );
 
-        $template = new GenericTemplate(1234);
+        $template = new ListTemplate(1234);
         $template->add($product);
 
         $actual = $template->message('message');
@@ -31,7 +31,7 @@ class GenericTemplateTest extends TestCase
                 'attachment' => [
                     'type' => 'template',
                     'payload' => [
-                        'template_type' => 'generic',
+                        'template_type' => 'list',
                         'buttons' => [
                             [
                                 'title' => 'Produto',
