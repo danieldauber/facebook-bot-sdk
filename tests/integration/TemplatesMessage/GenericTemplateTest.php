@@ -32,7 +32,7 @@ class GenericTemplateTest extends TestCase
                     'type' => 'template',
                     'payload' => [
                         'template_type' => 'generic',
-                        'buttons' => [
+                        'elements' => [
                             [
                                 'title' => 'Produto',
                                 'image_url' => 'https://www.idealmarketing.com.br/blog/wp-content/uploads/2018/09/marketing-de-produto-conceito.jpg',
