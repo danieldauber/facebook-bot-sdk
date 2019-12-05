@@ -30,7 +30,7 @@ class Bot
         return $this->callSendApi($message);
     }
 
-    public function template(string $type, string $message, array $elements, array $config)
+    public function template(string $type, string $message, array $elements, array $config = [])
     {
         $type = $this->load($type . 'Template', 'CodeBot\TemplatesMessage');
 
@@ -38,8 +38,8 @@ class Bot
             call_user_func_array([$type, $method], $params);
         }
 
-        foreach ($elements as $elements) {
-            $type->add($elements);
+        foreach ($elements as $element) {
+            $type->add($element);
         }
 
         $message = $type->message($message);
