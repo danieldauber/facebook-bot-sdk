@@ -4,7 +4,7 @@ namespace CodeBot;
 
 use PHPUnit\Framework\TestCase;
 
-class CallStarterButtonTest extends TestCase
+class GetStarterButtonTest extends TestCase
 {
 
     public function testAddGetStartedButton()
