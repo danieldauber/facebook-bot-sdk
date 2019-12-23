@@ -76,7 +76,7 @@ class Bot
             $menu->callToAction($action['id'], $action['type'], $action['title'], $action['parent_id'], $action['value']);
         }
 
-        return $this->callSendApi($menu->toArray, CallSendApi::URL_PROFILE);
+        return $this->callSendApi($menu->toArray(), CallSendApi::URL_PROFILE);
     }
 
 
